@@ -29,7 +29,15 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 # Gems required to make it easier to define which view variant should be sent to the user
-gem "useragent"
+gem 'useragent'
+
+# Gems that allow us to use advanced search, search as Postgres full text search and fast fuzzy matches
+gem 'pg_search'
+
+# Gems required to get oauth working.
+gem 'omniauth', '~> 1.8'
+gem 'omniauth-facebook', '~> 8.0'
+gem 'omniauth-google-oauth2', '~> 0.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
