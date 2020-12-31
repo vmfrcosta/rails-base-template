@@ -3,5 +3,7 @@
 module HasAddresses
   extend ActiveSupport::Concern
 
-  has_many :addresses
+  included do
+    has_many :addresses
+  end
 end
