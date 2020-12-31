@@ -15,19 +15,22 @@ module Permission
       end
 
       def user_basic_permission
-        allow "sessions", [:destroy]
+        # i.e.:
+        # allow "sessions", [:destroy]
       end
 
       def user_resource_permission(user)
-        allow "*", ["*"] do |model|
-          model && model.try(:user_id) == user.id
-        end
+        # i.e.:
+        # allow "*", ["*"] do |model|
+        #   model && model.try(:user_id) == user.id
+        # end
       end
 
       def user_custom_permission(user)
-        allow "cart_items", [:update] do |model|
-          owner?(model.order, user)
-        end
+        # i.e.:
+        # allow "cart_items", [:update] do |model|
+        #   owner?(model.order, user)
+        # end
       end
   end
 end
