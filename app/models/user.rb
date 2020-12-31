@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   include HasAddresses
-  include Destroyable, Registarable
+  include Destroyable, Registrable
 
   has_secure_password
 end
